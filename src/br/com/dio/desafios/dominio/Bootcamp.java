@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class Bootcamp {
     private String nome;
-    private String descricacao;
+    private String descricao;
     private final LocalDate dataInicial = LocalDate.now();
     private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
@@ -22,12 +22,12 @@ public class Bootcamp {
         this.nome = nome;
     }
 
-    public String getDescricacao() {
-        return descricacao;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescricacao(String descricacao) {
-        this.descricacao = descricacao;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public Set<Dev> getDevsInscritos() {
@@ -50,7 +50,7 @@ public class Bootcamp {
     public int hashCode() {
         int hash = 3;
         hash = 23 * hash + Objects.hashCode(this.nome);
-        hash = 23 * hash + Objects.hashCode(this.descricacao);
+        hash = 23 * hash + Objects.hashCode(this.descricao);
         hash = 23 * hash + Objects.hashCode(this.dataInicial);
         hash = 23 * hash + Objects.hashCode(this.dataFinal);
         hash = 23 * hash + Objects.hashCode(this.devsInscritos);
@@ -73,7 +73,7 @@ public class Bootcamp {
         if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
-        if (!Objects.equals(this.descricacao, other.descricacao)) {
+        if (!Objects.equals(this.descricao, other.descricao)) {
             return false;
         }
         if (!Objects.equals(this.dataInicial, other.dataInicial)) {

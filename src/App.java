@@ -1,5 +1,7 @@
 
+import br.com.dio.desafios.dominio.Bootcamp;
 import br.com.dio.desafios.dominio.Curso;
+import br.com.dio.desafios.dominio.Dev;
 import br.com.dio.desafios.dominio.Mentoria;
 import java.time.LocalDate;
 
@@ -26,9 +28,43 @@ public class App {
         mentoria2.setDescricao("Descrição da mentoria de JavaScript");
         mentoria2.setData(LocalDate.now());
 
-        System.out.println(curso1);
+        /*System.out.println(curso1);
         System.out.println(curso2);
         System.out.println(mentoria);
-        System.out.println(mentoria2);
+        System.out.println(mentoria2); */
+
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Descrição Bootcamp Java Developer");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria);
+        bootcamp.getConteudos().add(mentoria2);
+
+        Dev devPablo = new Dev();
+        devPablo.setNome("Pablo");
+        devPablo.inscreverBootcamp(bootcamp);
+        devPablo.progredir();
+        devPablo.progredir();
+        devPablo.progredir();
+        devPablo.progredir();
+        devPablo.progredir();
+        devPablo.progredir();
+        System.out.println("Conteudos Inscritos de Pablo: " + devPablo.getConteudosInscritos());
+        System.out.println("Conteudos Concluidos de Pablo: " + devPablo.getConteudosConcluidos());
+        System.out.println("XP: " + devPablo.calcularTotalXp());
+
+        System.out.println("--------------------------------------");
+
+        Dev devBiano = new Dev();
+        devBiano.setNome("Biano");
+        devBiano.inscreverBootcamp(bootcamp);
+        devBiano.progredir();
+        devBiano.progredir();
+        devBiano.progredir();
+        System.out.println("Conteudos Inscritos de Biano: " + devBiano.getConteudosInscritos());
+        System.out.println("Conteudos Concluidos de Biano: " + devBiano.getConteudosConcluidos());
+        System.out.println("XP: " + devBiano.calcularTotalXp());
+
     }
 }
