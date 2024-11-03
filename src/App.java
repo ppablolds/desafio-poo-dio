@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 public class App {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Curso curso1 = new Curso();
         curso1.setTitulo("Curso de Java");
         curso1.setDescricao("Descrição do curso de Java");
@@ -27,11 +27,6 @@ public class App {
         mentoria2.setTitulo("mentoria de JavaScript");
         mentoria2.setDescricao("Descrição da mentoria de JavaScript");
         mentoria2.setData(LocalDate.now());
-
-        /*System.out.println(curso1);
-        System.out.println(curso2);
-        System.out.println(mentoria);
-        System.out.println(mentoria2); */
 
         Bootcamp bootcamp = new Bootcamp();
         bootcamp.setNome("Bootcamp Java Developer");
